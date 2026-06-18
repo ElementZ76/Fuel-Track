@@ -1,7 +1,7 @@
 <div align="center">
   <div style="padding: 20px;">
     <div style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #8069BF, #4E4273); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; color: #fff; margin: 0 auto 16px; font-family: 'Space Grotesk', sans-serif;">F</div>
-    <h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif;">FuelTrack AI</h1>
+    <h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif;">FuelTrack</h1>
     <p style="margin-top: 8px; color: #A09CB0;">Fleet Telemetry • Financial Tracking</p>
   </div>
 
@@ -17,7 +17,7 @@
 
 ## 📖 Overview
 
-**FuelTrack AI** is a comprehensive, local-first web application designed to track vehicle telemetry, log fuel expenditures, and calculate precise efficiency metrics over time. Built with a focus on a premium, "Automotive Precision" design language, the platform offers users deep insights into their fleet's financial and physical performance without relying on cloud services.
+**FuelTrack** is a comprehensive, local-first web application designed to track vehicle telemetry, log fuel expenditures, and calculate precise efficiency metrics over time. Built with a focus on a premium, "Automotive Precision" design language, the platform offers users deep insights into their fleet's financial and physical performance without relying on cloud services.
 
 Whether you're tracking a daily commuter or a fleet of vehicles, FuelTrack AI provides the analytical rigor needed to understand true cost-of-ownership.
 
@@ -171,7 +171,7 @@ npm run dev
 
 ## 🛡️ License & Architecture
 
-FuelTrack AI adheres strictly to the architectural invariants defined in the `gemini.md` constitution, ensuring deterministic tool execution, isolated environments, and modular logic separation.
+FuelTrack adheres strictly to the architectural invariants defined in the `gemini.md` constitution, ensuring deterministic tool execution, isolated environments, and modular logic separation.
 
 <div align="center">
   <sub>Built with the B.L.A.S.T. framework for resilient software architecture.</sub>
