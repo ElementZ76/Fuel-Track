@@ -96,13 +96,13 @@ git clone https://github.com/ElementZ76/Fuel-Track-AI.git
 cd Fuel-Track-AI
 
 # Create and activate the virtual environment
-# On Windows (PowerShell):
+# On Windows (PowerShell/CMD):
 python -m venv venv
-.\venv\Scripts\activate
+venv\Scripts\activate
 
-# On WSL/Linux/Mac (Bash):
-python3 -m venv venv_wsl
-source venv_wsl/bin/activate
+# On Mac/Linux (Bash):
+python3 -m venv venv
+source venv/bin/activate
 
 # Install backend dependencies
 pip install -r server/requirements.txt
@@ -117,33 +117,27 @@ cd ..
 
 ### 2. Running the Application
 
-You can launch the application using either the automated scripts or by starting the services manually. 
+You can launch the application using a universal startup script or by starting the services individually. 
 
-#### Option A: One-Click Startup (Automated)
+#### Option A: Universal Startup Script (Recommended)
 
-Convenient scripts are included to spin up both the frontend and backend simultaneously.
+A universal Python script is included to spin up both the frontend and backend simultaneously. **Make sure your virtual environment is activated before running.**
 
-**For Windows (PowerShell):**
-```powershell
-./run_dev.ps1
-```
-
-**For Mac/Linux (WSL/Bash):**
 ```bash
-chmod +x run_dev.sh
-./run_dev.sh
+# Start both frontend and backend
+python run.py
 ```
+> The script will automatically start FastAPI on port 8080 and Vite on port 5173. Press `Ctrl+C` to stop both servers.
 
-#### Option B: Manual Startup (WSL / Linux / Mac)
+#### Option B: Manual Startup (Individual Servers)
 
-If you prefer to run the services manually (e.g., in separate terminal windows to monitor logs), run the following commands **from the project root directory**.
+If you prefer to run the services individually (e.g., in separate terminal windows to monitor logs), run the following commands **from the project root directory**.
 
 **Terminal 1: Start the Backend**
 ```bash
-# Ensure you are at the project root
-# Activate the virtual environment
-# On Windows: .\venv\Scripts\activate
-# On WSL/Linux/Mac: source venv_wsl/bin/activate
+# Ensure you are at the project root and virtual environment is activated
+# On Windows: venv\Scripts\activate
+# On Mac/Linux: source venv/bin/activate
 
 # Start the FastAPI server on port 8080
 uvicorn server.main:app --reload --port 8080
@@ -153,7 +147,6 @@ uvicorn server.main:app --reload --port 8080
 **Terminal 2: Start the Frontend**
 ```bash
 # Ensure you are at the project root
-# Navigate to the client directory
 cd client
 
 # Start the Vite development server
